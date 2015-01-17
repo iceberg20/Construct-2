@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>fase1</name>
+    <events>
+        <event-block sid="1240319129577283">
+            <conditions>
+                <condition id="2" name="Key is down" sid="1104265551892291" type="Keyboard">
+                    <param id="0" name="Key">32 (Space)</param>
+                </condition>
+                <condition id="-6" name="Every X seconds" sid="9938998601105213" type="System">
+                    <param id="0" name="Interval (seconds)">0.2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="8653425334948931" type="player3">
+                    <param id="0" name="Object">projetil</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="-8" name="Set angle" sid="1020683545422119" type="projetil">
+                    <param id="0" name="Angle">-90</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8620760492426225">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="5750897118904647" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="6262008097949467" type="thrust_orange_big">
+                    <param id="0" name="Pin to">player3</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9064702291936401">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="8518544625542646" type="System" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="817782082660309" type="TiledBackground2">
+                    <param id="0" name="Y">TiledBackground2.Y+0.2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3032256157420824">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="7699887794081133" type="projetil">
+                    <param id="0" name="Object">saucer</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="5526392527418873" type="saucer" />
+                <action id="-3" name="Create object" sid="1754929695412145" type="System">
+                    <param id="0" name="Object to create">Exp_type_A</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">projetil.X</param>
+                    <param id="3" name="Y">projetil.Y</param>
+                </action>
+                <action id="-9" name="Destroy" sid="6339487749227565" type="projetil" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
