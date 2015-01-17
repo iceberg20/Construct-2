@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>fase1</name>
+    <events>
+        <event-block sid="1240319129577283">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="1104265551892291" type="Keyboard">
+                    <param id="0" name="Key">32 (Space)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="8653425334948931" type="player3">
+                    <param id="0" name="Object">projetil</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-8" name="Set angle" sid="1020683545422119" type="projetil">
+                    <param id="0" name="Angle">-90</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
